@@ -27,3 +27,9 @@ npm run dev
 ```sh
 npm run build
 ```
+
+## Docker
+
+```sh
+docker compose -f docker-compose.yaml up --build
+```
