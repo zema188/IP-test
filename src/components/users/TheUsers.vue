@@ -76,7 +76,12 @@ onMounted(() => {
         >
             Обновить список
         </button>
-        <TransitionGroup class="users__list" name="list" tag="div">
+        <p
+            v-if="!users.length"
+        >
+            Список пользователей пуст
+        </p>
+        <TransitionGroup class="users__list" name="list" tag="div" v-else>
             <user-item
                 v-for="user of users" :key="user.id"
                 :user="user"
